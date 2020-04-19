@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Navbar from './components/layout/Navbar'
-import Dashboard from './components/dashboard/Dashboard';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 
@@ -11,9 +10,7 @@ class App extends Component {
       <BrowserRouter>
       <div className="App">
         <Navbar />
-        <switch>
-          <Route path='/' component={Dashboard} />
-          
+        <switch> 
           <Route path='/signin' component={SignIn} />
           <Route path='/signup' component={SignUp} />
         </switch>
