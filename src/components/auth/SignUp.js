@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 class SignUp extends Component {
     state = {
@@ -20,7 +21,7 @@ class SignUp extends Component {
         return(
             <div>
                 <form onSubmit={this.handleSubmit} className="White">
-                    <h5 className="grey-text text-darken-3">Sign In</h5>
+                    <h4 className="grey-text text-darken-3">Register</h4>
                     <div className="input-field">
                         <label htmlFor="email">Email</label>
                         <input type="email" id="email" onChange={this.handleChange}/>
@@ -29,16 +30,20 @@ class SignUp extends Component {
                         <label htmlFor="password">Password</label>
                         <input type="password" id="password" onChange={this.handleChange}/>
                     </div>
-                    <div className="input-field">
-                        <label htmlFor="fisrtName">First Name</label>
-                        <input type="firstName" id="firstName" onChange={this.handleChange}/>
-                    </div>
-                    <div className="input-field">
-                        <label htmlFor="lastName">Last Name</label>
-                        <input type="lastName" id="lastName" onChange={this.handleChange}/>
-                    </div>
-                    <div className="input-field">
-                        <button className="">Log In</button>
+                    <FormGroup row>
+                        <Label for="exampleEmail" sm={2}>First Name</Label>
+                            <Col sm={10}>
+                                <input type="firstName" id="firstName" placeholder="First Name" onChange={this.handleChange}/>
+                            </Col>
+                    </FormGroup>
+                    <FormGroup row>
+                        <Label for="exampleEmail" sm={2}>Last Name</Label>
+                            <Col sm={10}>
+                                <input type="lastName" id="lastName" placeholder="Last Name" onChange={this.handleChange}/>
+                            </Col>
+                    </FormGroup>
+                    <div>
+                        <Button color="primary" size="lg" active>Log In</Button>
                     </div>
                 </form>
             </div>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'reactstrap';
 
 class SignIn extends Component {
     state = {
@@ -18,7 +19,7 @@ class SignIn extends Component {
         return(
             <div>
                 <form onSubmit={this.handleSubmit} className="White">
-                    <h5 className="grey-text text-darken-3">Sign In</h5>
+                    <h4 className="grey-text text-darken-3">Log In</h4>
                     <div className="input-field">
                         <label htmlFor="email">Email</label>
                         <input type="email" id="email" onChange={this.handleChange}/>
@@ -27,8 +28,8 @@ class SignIn extends Component {
                         <label htmlFor="password">Password</label>
                         <input type="password" id="password" onChange={this.handleChange}/>
                     </div>
-                    <div className="input-field">
-                        <button className="">Log In</button>
+                    <div>
+                        <Button color="primary">Log In</Button>
                     </div>
                 </form>
             </div>
