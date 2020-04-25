@@ -3,7 +3,7 @@ import auth from '../firebase';
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
 import firebase from 'firebase'
 
-const login =({ setSession })=>{
+const Login =({ setSession })=>{
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
 
@@ -89,4 +89,4 @@ const login =({ setSession })=>{
   );
 }
 
-export default login;
+export default Login;

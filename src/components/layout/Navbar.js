@@ -10,8 +10,6 @@ const Navbar = () => {
             <div>
                 <Spinner color="light" />
                 <Link to='/' className="">เว็บไซต์สำหรับคนรักอนิเมะ</Link>
-                <SignInLinks />
-                <SignOutLinks />
             </div>
         </nav>
     )

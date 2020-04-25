@@ -2,10 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Login from './Login'
 import auth from '../firebase';
 
-
-
-
-const admin = () => {
+const Admin = () => {
   const [session, setSession] = useState({
     isLoggedIn: false,
     currentUser: null,
@@ -41,6 +38,7 @@ const admin = () => {
     <div>
       {session.isLoggedIn ? (
         <div>
+          <center>
           <span>
             <h1>Welcome  {session.currentUser && session.currentUser.displayName}</h1>
             {session.currentUser && session.currentUser.email}
@@ -56,7 +54,8 @@ const admin = () => {
             <button  
                
                 onClick={handleLogout}>logout</button>
-          <h1>Hello</h1>
+          <h1>Welcome to Schedule Anime</h1>
+          </center>
         </div>
 
       ) : (
@@ -69,4 +68,4 @@ const admin = () => {
     </div>
   )
 }
-export default admin
+export default Admin
