@@ -78,8 +78,8 @@ const Login =({ setSession })=>{
     onChange={(e)=>setPassword(e.target.value)}
     />
 
-    <button onClick={handleLogin}> Login</button>
-    <button onClick={handleRegister}> Register</button>
+    <button class="btn btn-primary" onClick={handleLogin}> Login</button>
+    <button class="btn btn-success" onClick={handleRegister}> Register</button>
     <StyledFirebaseAuth
       uiConfig={uiConfig}
       firebaseAuth={firebase.auth()}
