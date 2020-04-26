@@ -9,7 +9,7 @@ const Navbar = () => {
         <nav className="black">
             <div>
                 <Spinner color="light" />
-                <Link to='/' className="">เว็บไซต์สำหรับคนรักอนิเมะ</Link>
+                <Link to='/' className="">เว็บไซต์ตารางออกอากาศอนิเมะ</Link>
             </div>
         </nav>
     )

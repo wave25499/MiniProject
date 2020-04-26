@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Login from './Login'
+import Login from './Login';
 import auth from '../firebase';
+import Tab from './Tab';
 
 const Admin = () => {
   const [session, setSession] = useState({
@@ -55,6 +56,7 @@ const Admin = () => {
                
                 onClick={handleLogout}>logout</button>
           <h1>Welcome to Schedule Anime</h1>
+          <Tab />
           </center>
         </div>
 
