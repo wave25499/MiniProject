@@ -52,9 +52,7 @@ const Admin = () => {
           
             <br/>
            
-            <button  
-               
-                onClick={handleLogout}>logout</button>
+            <button class="btn btn-danger" onClick={handleLogout}>logout</button>
           <h1>Welcome to Schedule Anime</h1>
           <Tab />
           </center>

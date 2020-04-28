@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import auth from '../firebase';
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
 import firebase from 'firebase'
+import './Login.css';
 
 const Login =({ setSession })=>{
   const [username, setUsername] = useState('')
@@ -53,7 +54,11 @@ const Login =({ setSession })=>{
   const uiConfig = {
     signInFlow: "popup",
     signInOptions: [
-        firebase.auth.GoogleAuthProvider.PROVIDER_ID
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+        firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+        firebase.auth.GithubAuthProvider.PROVIDER_ID,
+        firebase.auth.EmailAuthProvider.PROVIDER_ID
     ],
     callbacks: {
       signInSuccess: () => false
@@ -63,6 +68,7 @@ const Login =({ setSession })=>{
     
     <div class="wrapper">
     <div class="form-signin">
+      <center>
     <h2 class="form-signin-heading">Please login</h2>
     {/* <p1>{username} {password}</p1> */}
     <input type="text" class="form-control" name="username" 
@@ -80,6 +86,7 @@ const Login =({ setSession })=>{
       uiConfig={uiConfig}
       firebaseAuth={firebase.auth()}
     />
+    </center>
     </div>
   </div>
   );
